@@ -1,0 +1,8 @@
+<form>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="title" placeholder="Enter product title">
+  </div>
+  <button type="submit" ng-click="updateProduct()" class="btn btn-primary">update</button>
+</form>
+
+<div ng-if="message" class="well">{{ message }}</div>

@@ -1,0 +1,20 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Date Created</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in itemList | orderBy: '-id'">
+        <td>{{ item.title }}</td>
+        <td>{{ item.created_on | date:'d MMMM yyyy'}}</td>
+        <td><a class="btn btn-info" href="/#!/update-product/{{item.id}}">update</a></td>
+        <td><button ng-click="deleteProduct(item.id)" class="btn btn-info">delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
